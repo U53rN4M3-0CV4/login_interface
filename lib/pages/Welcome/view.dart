@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_interface/common/values/constant.dart';
 import 'package:login_interface/common/widgets/index_widgets.dart';
+import 'package:flutter/services.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
     Size size = MediaQuery.of(context).size;
     return GetBuilder<LoginController>(
       init: LoginController(),
